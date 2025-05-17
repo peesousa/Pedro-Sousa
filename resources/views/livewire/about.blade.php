@@ -15,7 +15,7 @@
                 <hr class="my-4 border-dotted border-gray-400">
                 <div class="prose prose-lg lg:prose-xl prose-invert text-gray-300 font-mulish leading-relaxed max-w-none">
                     <p>
-                        {{ __('aboutPageContent.summary') }}
+                        {{ __('pages.about.summary') }}
                     </p>
                 </div>
 
@@ -25,7 +25,7 @@
                             class="inline-block bg-[#4169E1] text-white font-poppins font-semibold no-underline rounded-full py-3 px-10
                                     hover:bg-white hover:text-[#4169E1] transition-all duration-300 ease-in-out transform cursor-pointer
                                     focus:outline-none focus:ring-2 focus:ring-[#4169E1] focus:ring-opacity-50">
-                        {{ __('aboutPageContent.button') }}
+                        {{ __('pages.about.button') }}
                     </button>
                 </div>
 

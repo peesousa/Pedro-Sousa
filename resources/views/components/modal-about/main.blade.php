@@ -32,7 +32,8 @@
     </div>
 
     <div class="flex-grow overflow-y-auto px-8 pb-6">
-        <div class="flex flex-col lg:flex-row gap-x-8 lg:gap-x-10">            <div class="w-full lg:w-1/3 lg:sticky lg:top-0 self-start pt-1">
+        <div class="flex flex-col lg:flex-row gap-x-8 lg:gap-x-10">
+            <div class="w-full lg:w-1/3 lg:sticky lg:top-0 self-start pt-1">
                 @include('components.modal-about.sidebar')
             </div>
             <div class="w-full lg:w-2/3 mt-6 lg:mt-0">

@@ -1,64 +1,40 @@
 @php
-$services = [
-    [
-        'image' => asset('images/services/laravelAndSpring.png'),
-        'description' => 'Desenvolvo aplicações Back-End com Laravel ou Spring Boot'
-    ],
-    [
-        'image' => asset('images/services/figmaToCode.png'),
-        'description' => 'Faço implementações de interfaces baseados em um design'
-    ]
-];
-
 $skills = [
-    ['name' => 'Laravel', 'level' => 'w-11/12', 'text_level' => '90%'],
-    ['name' => 'PHP', 'level' => 'w-10/12', 'text_level' => '85%'],
+    ['name' => 'PHP', 'level' => 'w-11/12', 'text_level' => '90%'],
+    ['name' => 'Laravel', 'level' => 'w-10/12', 'text_level' => '80%'],
+    ['name' => 'HTML5', 'level' => 'w-11/12', 'text_level' => '95%'],
+    ['name' => 'CSS3', 'level' => 'w-11/12', 'text_level' => '90%'],
+    ['name' => 'JavaScript', 'level' => 'w-9/12', 'text_level' => '75%'],
     ['name' => 'Vue.js', 'level' => 'w-9/12', 'text_level' => '75%'],
+    ['name' => 'Angular', 'level' => 'w-7/12', 'text_level' => '65%'],
     ['name' => 'Tailwind CSS', 'level' => 'w-10/12', 'text_level' => '80%'],
-];
-
-$timelineEducation = [
-    ['year' => '20XX - 20XX', 'title' => 'Ciência da Computação', 'institution' => 'Instituto Federal de Brasília', 'description' => 'Foco em desenvolvimento full-stack, algoritmos e estruturas de dados.'],
-];
-$timelineWorking = [
-    ['year' => '20XX - Presente', 'title' => 'Desenvolvedor Freelancer', 'institution' => 'Projetos Diversos', 'description' => 'Desenvolvimento de aplicações web completas, APIs e integrações para clientes variados.'],
+    ['name' => 'TALL Stack', 'level' => 'w-10/12', 'text_level' => '80%'],
 ];
 @endphp
 
 <div class="space-y-10 font-poppins text-sm text-gray-300">
     <div class="prose prose-base lg:prose-lg prose-invert max-w-none text-gray-300 font-mulish leading-relaxed">
         <h3 class="text-xl lg:text-2xl uppercase font-poppins !text-white !mb-3">
-            Sobre <span class="text-[#4169E1]">mim</span>
+            {{ __('modal_about.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.title2') }}</span>
         </h3>
         <hr class="border-gray-700 !mt-0 !mb-4">
-        <p>
-            Olá a todos! Meu nome é Pedro Sousa, eu tenho 21 anos e,
-            atualmente, sou estudante de Ciência da Computação pelo
-            Instituto Federal de Brasília. Durante a trajetória na
-            faculdade eu tive a oportunidade de trabalhar com tecnologias
-            de desenvolvimento Front-End e Back-End. Logo de cara me
-            apaixonei por essas tecnologias e desde então eu trabalho com
-            elas utilizando algumas ferramentas como Laravel, Spring Boot,
-            Angular e Vue.Js. Durante o período de estudos eu também tive
-            contato com outras tecnologias como Git/ GitHub, Docker,
-            Bancos de Dados SQL e algumas ferramentas de escritório como
-            Word e Excel, além de ter uma boa organização e conhecimento
-            de metodologias ágeis, onde eu me destaco mais na utilização
-            do Kanban.
-        </p>
+        <p>{{ __('modal_about.content') }}</p>
     </div>
 
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
-            Meus <span class="text-[#4169E1]">Serviços</span>
+            {{ __('modal_about.quality_services.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.quality_services.title2') }}</span>
         </h3>
         <hr class="border-gray-700 mb-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            @foreach ($services as $service)
+        <div class="grid grid-cols-1 gap-6">
+            @foreach (__('modal_about.quality_services.items') as $item)
             <div class="bg-gray-700 rounded-lg shadow-md overflow-hidden flex flex-col">
-                <img src="{{ $service['image'] }}" alt="Serviço" class="w-full h-40 object-cover">
-                <div class="p-4 flex-grow">
-                    <p class="text-xs sm:text-sm text-gray-300">{{ $service['description'] }}</p>
+                {{-- <img src="{{ $service['image'] }}" alt="Serviço" class="w-full h-40 object-cover"> --}}
+                <div class="p-4 flex items-center">
+                    <svg class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                    </svg>
+                    <p class="text-xs sm:text-sm text-gray-300">{{ $item }}</p>
                 </div>
             </div>
             @endforeach
@@ -67,7 +43,7 @@ $timelineWorking = [
 
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
-            Minhas <span class="text-[#4169E1]">Skills</span>
+            {{ __('modal_about.skills.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.skills.title2') }}</span>
         </h3>
         <hr class="border-gray-700 mb-6">
         <div class="space-y-4">
@@ -87,31 +63,28 @@ $timelineWorking = [
 
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
-            Trajetória <span class="text-[#4169E1]">Acadêmica</span>
+            {{ __('modal_about.education_timeline.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.education_timeline.title2') }}</span>
         </h3>
         <hr class="border-gray-700 mb-6">
         <div class="space-y-6 relative border-l-2 border-gray-600 ml-3 pl-6">
-            @foreach ($timelineEducation as $item)
+        @foreach (Lang::get('modal_about.education_timeline.content') as $item)
             <div class="relative">
                 <div class="absolute -left-[30px] top-1 w-4 h-4 bg-[#4169E1] rounded-full border-2 border-gray-800"></div>
                 <p class="text-xs text-gray-400">{{ $item['year'] }}</p>
                 <h4 class="text-md font-semibold text-white">{{ $item['title'] }}</h4>
                 <p class="text-xs text-gray-300 italic">{{ $item['institution'] }}</p>
-                @if(isset($item['description']))
-                <p class="text-xs text-gray-400 mt-1">{{ $item['description'] }}</p>
-                @endif
             </div>
-            @endforeach
+        @endforeach
         </div>
     </div>
 
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
-            Trajetória <span class="text-[#4169E1]">Profissional</span>
+            {{ __('modal_about.working_timeline.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.working_timeline.title2') }}</span>
         </h3>
         <hr class="border-gray-700 mb-6">
         <div class="space-y-6 relative border-l-2 border-gray-600 ml-3 pl-6">
-             @foreach ($timelineWorking as $item)
+             @foreach (Lang::get('modal_about.working_timeline.content') as $item)
             <div class="relative">
                 <div class="absolute -left-[30px] top-1 w-4 h-4 bg-[#4169E1] rounded-full border-2 border-gray-800"></div>
                 <p class="text-xs text-gray-400">{{ $item['year'] }}</p>
