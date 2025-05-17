@@ -58,14 +58,16 @@
     >
         @include('partials.svg')
 
-        <div class="w-48 md:w-64 mt-6">
-            <div class="text-white text-xs sm:text-sm mb-1 text-center"></div>
-            <div class="w-full bg-white h-0.5 sm:h-1 rounded-full overflow-hidden">
-                <div class="bg-[#4169e1] h-0.5 sm:h-1 rounded-full"
-                     :style="`width: ${progress}%; transition: width 0.1s linear;`"
-                ></div>
+        {{--
+            <div class="w-48 md:w-64 mt-6">
+                <div class="text-white text-xs sm:text-sm mb-1 text-center"></div>
+                <div class="w-full bg-white h-0.5 sm:h-1 rounded-full overflow-hidden">
+                    <div class="bg-[#4169e1] h-0.5 sm:h-1 rounded-full"
+                        :style="`width: ${progress}%; transition: width 0.1s linear;`"
+                    ></div>
+                </div>
             </div>
-        </div>
+        --}}
     </div>
 
     <div

@@ -1,8 +1,7 @@
-{{-- Defina seus dados aqui ou passe-os para o componente --}}
 @php
 $services = [
     [
-        'image' => asset('images/services/laravelAndSpring.png'), // Coloque as imagens em public/images/services/
+        'image' => asset('images/services/laravelAndSpring.png'),
         'description' => 'Desenvolvo aplicações Back-End com Laravel ou Spring Boot'
     ],
     [
@@ -12,25 +11,21 @@ $services = [
 ];
 
 $skills = [
-    ['name' => 'Laravel', 'level' => 'w-11/12', 'text_level' => '90%'], // Tailwind width class
+    ['name' => 'Laravel', 'level' => 'w-11/12', 'text_level' => '90%'],
     ['name' => 'PHP', 'level' => 'w-10/12', 'text_level' => '85%'],
     ['name' => 'Vue.js', 'level' => 'w-9/12', 'text_level' => '75%'],
     ['name' => 'Tailwind CSS', 'level' => 'w-10/12', 'text_level' => '80%'],
-    // Adicione mais skills
 ];
 
 $timelineEducation = [
     ['year' => '20XX - 20XX', 'title' => 'Ciência da Computação', 'institution' => 'Instituto Federal de Brasília', 'description' => 'Foco em desenvolvimento full-stack, algoritmos e estruturas de dados.'],
-    // Adicione mais itens
 ];
 $timelineWorking = [
     ['year' => '20XX - Presente', 'title' => 'Desenvolvedor Freelancer', 'institution' => 'Projetos Diversos', 'description' => 'Desenvolvimento de aplicações web completas, APIs e integrações para clientes variados.'],
-    // Adicione mais itens
 ];
 @endphp
 
 <div class="space-y-10 font-poppins text-sm text-gray-300">
-    {{-- Seção Sobre Mim --}}
     <div class="prose prose-base lg:prose-lg prose-invert max-w-none text-gray-300 font-mulish leading-relaxed">
         <h3 class="text-xl lg:text-2xl uppercase font-poppins !text-white !mb-3">
             Sobre <span class="text-[#4169E1]">mim</span>
@@ -53,7 +48,6 @@ $timelineWorking = [
         </p>
     </div>
 
-    {{-- Seção Meus Serviços --}}
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             Meus <span class="text-[#4169E1]">Serviços</span>
@@ -71,7 +65,6 @@ $timelineWorking = [
         </div>
     </div>
 
-    {{-- Seção Minhas Skills --}}
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             Minhas <span class="text-[#4169E1]">Skills</span>
@@ -92,7 +85,6 @@ $timelineWorking = [
         </div>
     </div>
 
-    {{-- Seção Trajetória Acadêmica --}}
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             Trajetória <span class="text-[#4169E1]">Acadêmica</span>
@@ -113,7 +105,6 @@ $timelineWorking = [
         </div>
     </div>
 
-    {{-- Seção Trajetória Profissional --}}
     <div>
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             Trajetória <span class="text-[#4169E1]">Profissional</span>

@@ -1,23 +1,18 @@
 <?php
 
+use App\Livewire\About;
+use App\Livewire\Blog;
+use App\Livewire\Contact;
+use App\Livewire\Home;
+use App\Livewire\Project;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.home');
-})->name('home');
+Route::get('/', Home::class)->name('home');
 
-Route::get('/about', function () {
-    return view('pages.about');
-})->name('about');
+Route::get('/about', About::class)->name('about');
 
-Route::get('/portfolio', function () {
-    return view('pages.portfolio');
-})->name('portfolio');
+Route::get('/projects', Project::class)->name('portfolio');
 
-Route::get('/blog', function () {
-    return view('pages.blog');
-})->name('blog');
+Route::get('/blog', Blog::class)->name('blog');
 
-Route::get('/contact', function () {
-    return view('pages.contact');
-})->name('contact');
+Route::get('/contact', Contact::class)->name('contact');

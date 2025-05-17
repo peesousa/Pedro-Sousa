@@ -1,5 +1,4 @@
 import './bootstrap';
-import Alpine from 'alpinejs';
+import Splide from '@splidejs/splide';
 
-window.Alpine = Alpine;
-Alpine.start();
+window.Splide = Splide;
