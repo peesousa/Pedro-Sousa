@@ -12,7 +12,7 @@
                 <h1 class="uppercase font-poppins text-3xl sm:text-4xl font-bold text-white mb-2">
                     Pedro <span class="text-[#4169E1]">Sousa</span>
                 </h1>
-                <hr class="my-4 border-dotted border-gray-400">
+                <hr class="my-4 border-dashed border-gray-800">
                 <div class="prose prose-lg lg:prose-xl prose-invert text-gray-300 font-mulish leading-relaxed max-w-none">
                     <p>
                         {{ __('pages.about.summary') }}
