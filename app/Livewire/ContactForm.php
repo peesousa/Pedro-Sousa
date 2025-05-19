@@ -44,14 +44,14 @@ class ContactForm extends Component
         $this->errorMessage = '';
 
         try {
-            Mail::to(env('MAIL_TO_ADDRESS', 'seu-email-de-destino@example.com')) // Configure no .env
+            Mail::to(env('MAIL_TO_ADDRESS', 'seu-email-de-destino@example.com'))
                 ->send(new ContactMessageMail($this->name, $this->email, $this->subject, $this->message));
 
-            $this->successMessage = __('contact.form_success'); // Adicione em lang/xx/pages.php ou generic.php
+            $this->successMessage = __('contact.form_success');
             $this->resetForm();
         } catch (\Exception $e) {
             // Log::error('Erro ao enviar email de contato: ' . $e->getMessage());
-            $this->errorMessage = __('contact.form_error'); // Adicione
+            $this->errorMessage = __('contact.form_error');
         }
     }
 

@@ -10,7 +10,7 @@
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
         </div>
 
-        <a href="# {{-- colocar link para o modal --}}"
+        <a href="{{ route('blog.show', $post->slug) }}"
            class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"
            aria-label="Ver detalhes do post{{ $post->title }}">
 

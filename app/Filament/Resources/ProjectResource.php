@@ -28,7 +28,7 @@ class ProjectResource extends Resource
                     ->label('Título do Projeto')
                     ->required()
                     ->maxLength(255)
-                    ->live(onBlur: true) // Para gerar o slug se o campo slug estiver vazio
+                    ->live(onBlur: true)
                     ->afterStateUpdated(fn (Forms\Set $set, ?string $state, Forms\Get $get) => blank($get('slug')) ? $set('slug', Str::slug($state)) : null),
 
                 Forms\Components\TextInput::make('slug')
@@ -54,11 +54,11 @@ class ProjectResource extends Resource
                     ->rows(3)
                     ->columnSpanFull(),
 
-                Forms\Components\RichEditor::make('full_description') // Ou MarkdownEditor
+                Forms\Components\RichEditor::make('full_description')
                     ->label('Descrição Completa')
                     ->columnSpanFull(),
 
-                Forms\Components\Textarea::make('technologies_used') // Mudado para Textarea para mais espaço
+                Forms\Components\Textarea::make('technologies_used')
                     ->label('Tecnologias Usadas')
                     ->helperText('Ex: Laravel, Tailwind CSS, Alpine.js')
                     ->rows(3)
@@ -101,7 +101,7 @@ class ProjectResource extends Resource
                     ])
                     ->default('draft')
                     ->required(),
-            ])->columns(2); // Aplica 2 colunas para os campos dentro do schema principal
+            ])->columns(2);
     }
 
     public static function table(Table $table): Table
@@ -110,7 +110,7 @@ class ProjectResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('image_path')
                     ->label('Imagem')
-                    ->disk('public'), // Garanta que storage/app/public está linkado com public/storage
+                    ->disk('public'),
                 Tables\Columns\TextColumn::make('title')
                     ->label('Título')
                     ->searchable()
@@ -121,22 +121,20 @@ class ProjectResource extends Resource
                 Tables\Columns\TextColumn::make('status')
                     ->label('Status')
                     ->badge()
-                    // ... (cores do badge como antes)
                     ->searchable(),
                 Tables\Columns\IconColumn::make('is_featured')
                     ->label('Destacado')
                     ->boolean(),
-                // ... (outras colunas como created_at)
             ])
             ->filters([
-                // ...
+                //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                // ...
+                //
             ]);
     }
 

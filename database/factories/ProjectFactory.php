@@ -15,12 +15,12 @@ class ProjectFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'category_name' => $this->faker->randomElement(['Web Design', 'Laravel', 'TALL Stack', 'Mobile App']),
-            'image_path' => 'portfolio/placeholder' . $this->faker->numberBetween(1, 6) . '.jpg', // Assumindo placeholders
+            'image_path' => 'portfolio/placeholder' . $this->faker->numberBetween(1, 6) . '.jpg',
             'short_description' => $this->faker->paragraph(2),
             'full_description' => $this->faker->paragraph(10),
             'technologies_used' => implode(', ', $this->faker->words(5)),
             'project_date' => $this->faker->date(),
-            'is_featured' => $this->faker->boolean(25), // 25% de chance de ser featured
+            'is_featured' => $this->faker->boolean(25),
             'sort_order' => $this->faker->numberBetween(0, 10),
             'status' => 'published',
         ];
