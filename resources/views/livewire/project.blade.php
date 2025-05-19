@@ -35,7 +35,7 @@
                         const splideEl = document.getElementById('projects-carousel');
                         if (splideEl) {
                            this.splideInstance = new Splide(splideEl, {
-                                type       : 'loop',
+                                type       : 'slide',
                                 perPage    : 3,
                                 perMove    : 1,
                                 gap        : '1rem',

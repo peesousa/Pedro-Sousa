@@ -24,4 +24,9 @@ class Blog extends Model
     protected $casts = [
         'published_at' => 'date',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }
