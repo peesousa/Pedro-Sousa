@@ -1,3 +1,14 @@
+FROM node:18 AS vite_builder
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm install --force
+
+COPY . .
+
+RUN npm run build
+
 FROM php:8.3-apache-bullseye
 
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
@@ -41,16 +52,13 @@ WORKDIR /var/www/html
 
 COPY . /var/www/html
 
+COPY --from=vite_builder /app/public/build /var/www/html/public/build
+
 RUN COMPOSER_MEMORY_LIMIT=-1 composer install --no-interaction --no-plugins --no-scripts --no-dev --prefer-dist --optimize-autoloader
 
 RUN composer clear-cache
 
-#RUN cp .env.production .env
-#RUN php artisan key:generate # Se APP_KEY estiver definida nas variáveis de ambiente do Render, ela deve sobrescrever esta.
-
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public/build
+RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache /var/www/html/public/build
 
 EXPOSE 80
-
-CMD ["apache2-foreground"]
