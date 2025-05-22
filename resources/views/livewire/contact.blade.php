@@ -34,13 +34,13 @@ $contactDetails = [
     ]
 ];
 @endphp
-    <section class="bg-black text-white py-16 lg:py-10">
+    <section class="text-white py-18 lg:py-10">
         <div class="container mx-auto px-4 max-w-4xl sm:px-6 lg:px-5">
             <div class="text-center lg:text-start">
                 <h2 class="text-3xl lg:text-4xl font-poppins font-bold mb-2 lg:mb-4">
                     {{ __('pages.contact.title1') }} <span class="text-[#4169E1]">{{ __('pages.contact.title2') }}</span>
                 </h2>
-                <hr class="py-2 mb-10 lg:mb-6 border-dashed border-gray-800">
+                <hr class="py-2 mb-10 lg:mb-6 border-dashed border-gray-600">
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
@@ -77,7 +77,7 @@ $contactDetails = [
                     @endforeach
                 </div>
 
-                <div class="lg:col-span-3 w-full bg-gray-800 p-6 sm:p-8 rounded-lg shadow-md">
+                <div class="lg:col-span-3 w-full bg-gray-800 p-8 sm:p-8 rounded-lg shadow-md">
                     @livewire('contact-form')
                 </div>
             </div>

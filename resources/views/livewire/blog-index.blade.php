@@ -1,27 +1,24 @@
-<div> {{-- Elemento raiz obrigatório para componentes Livewire --}}
-    <section class="py-12 sm:py-16 lg:py-20"> {{-- Padding vertical para a seção do blog --}}
+<div>
+    <section class="py-12 sm:py-16 lg:py-20">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl lg:max-w-5xl">
 
-            {{-- Título da Página do Blog --}}
             <div class="mb-12 lg:mb-16 text-center lg:text-start">
                 <h1 class="text-4xl lg:text-5xl font-poppins font-extrabold text-gray-900 dark:text-white leading-tight">
-                    {{ __('blog.index_main_title1') }} {{-- Ex: "Minha" ou "Últimas" --}}
-                    <span class="text-[#4169E1] dark:text-blue-400">{{ __('blog.index_main_title2') }}</span> {{-- Ex: "Trajetória" ou "Postagens" --}}
+                    {{ __('blog.index_main_title1') }}
+                    <span class="text-[#4169E1] dark:text-blue-400">{{ __('blog.index_main_title2') }}</span>
                 </h1>
                 <p class="mt-3 text-lg text-gray-500 dark:text-gray-400 font-mulish">
-                    {{ __('blog.index_subtitle') }} {{-- Ex: "Acompanhe meus aprendizados, ideias e reflexões sobre o mundo da tecnologia e desenvolvimento." --}}
+                    {{ __('blog.index_subtitle') }}
                 </p>
                 <hr class="mt-6 border-gray-200 dark:border-gray-700">
             </div>
 
             @if($posts && $posts->isNotEmpty())
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-10 lg:gap-12 xl:gap-16">
-                    {{-- Loop para exibir cada post --}}
                     @foreach($posts as $post)
                         <article wire:key="post-preview-{{ $post->id }}"
                                  class="bg-white dark:bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out overflow-hidden flex flex-col md:flex-row group">
 
-                            {{-- Imagem do Post (Opcional) --}}
                             @if($post->cover_image_path)
                                 <div class="md:w-2/5 lg:w-1/3 flex-shrink-0">
                                     <a href="{{ route('blog.show', $post->slug) }}" class="block h-56 md:h-full aspect-video md:aspect-auto">
@@ -31,7 +28,6 @@
                                 </div>
                             @endif
 
-                            {{-- Conteúdo do Card do Post --}}
                             <div class="p-6 md:p-8 flex flex-col justify-between flex-grow {{ $post->cover_image_path ? 'md:w-3/5 lg:w-2/3' : 'w-full' }}">
                                 <div>
                                     <p class="text-xs text-gray-500 dark:text-gray-400 font-mulish mb-2">
@@ -45,7 +41,6 @@
                                         </a>
                                     </h3>
                                     <div class="prose prose-sm dark:prose-invert text-gray-600 dark:text-gray-300 font-mulish leading-relaxed mb-4 max-w-none">
-                                        {{-- Usando excerpt ou um limite do conteúdo. Renderize como Markdown se for o caso --}}
                                         {!! Str::markdown(Str::limit(strip_tags($post->excerpt ?: $post->content), 180)) !!}
                                     </div>
                                 </div>
@@ -61,13 +56,11 @@
                     @endforeach
                 </div>
 
-                {{-- Links de Paginação --}}
                 <div class="mt-16 lg:mt-20">
-                    {{ $posts->links() }} {{-- Livewire usará views de paginação compatíveis com Tailwind por padrão --}}
+                    {{ $posts->links() }}
                 </div>
 
             @else
-                {{-- Mensagem se não houver posts --}}
                 <div class="text-center py-12">
                     <svg class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                         <path vector-effect="non-scaling-stroke" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
@@ -76,12 +69,6 @@
                     <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
                         {{ __('blog.no_posts_message') }}
                     </p>
-                    {{-- Opcional: Botão para voltar para home ou sugerir algo --}}
-                    {{-- <div class="mt-6">
-                        <a href="{{ route('home') }}" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#4169E1] hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4169E1]">
-                            Voltar para a Home
-                        </a>
-                    </div> --}}
                 </div>
             @endif
         </div>

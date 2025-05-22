@@ -1,4 +1,5 @@
 <div>
+        {{--        <x-intro/> --}}
     <div class="flex flex-col mt-40 items-center justify-center">
 
             <h1 class="text-white text-6xl font-extrabold uppercase">Pedro <span class="text-[#4169e1]">Sousa</span></h1>
