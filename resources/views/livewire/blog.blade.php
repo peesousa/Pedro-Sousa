@@ -1,10 +1,10 @@
 <div>
-    <section class="bg-black text-white py-14 lg:py-10">
+    <section class="text-white py-14 lg:py-10">
         <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
             <h2 class="text-3xl lg:text-4xl font-poppins font-bold text-start mb-2 lg:mb-4">
                 Últimos <span class="text-[#4169E1]">Posts</span>
             </h2>
-            <hr class="py-2 mb-6 border-dashed border-gray-900">
+            <hr class="py-2 mb-6 border-dashed border-gray-600">
 
             @if($blogPosts && $blogPosts->isNotEmpty())
                 <div x-data="carousel()" x-init="initSplide()" class="relative">

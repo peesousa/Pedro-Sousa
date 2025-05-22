@@ -1,30 +1,28 @@
-<div>
-    <section class="bg-black text-white py-14 lg:py-10">
-        <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
-            <h2 class="text-3xl lg:text-4xl font-poppins font-bold text-start mb-2 lg:mb-4">
-                Meus <span class="text-[#4169E1]">Projetos</span>
-            </h2>
-            <hr class="py-2 mb-6 border-dashed border-gray-900">
+<section class="text-white py-14 lg:py-10">
+    <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
+        <h2 class="text-3xl lg:text-4xl font-poppins font-bold text-start mb-2 lg:mb-4">
+            Meus <span class="text-[#4169E1]">Projetos</span>
+        </h2>
+        <hr class="py-2 mb-6 border-dashed border-gray-600">
 
-            @if($projectItems && $projectItems->isNotEmpty())
-                <div x-data="carousel()" x-init="initSplide()" class="relative">
-                    <div class="splide" id="projects-carousel">
-                        <div class="splide__track">
-                            <ul class="splide__list">
-                                @foreach ($projectItems as $item)
-                                <li class="splide__slide">
-                                    <x-carousel.card :project="$item"/>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
+        @if($projectItems && $projectItems->isNotEmpty())
+            <div x-data="carousel()" x-init="initSplide()" class="relative">
+                <div class="splide" id="projects-carousel">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            @foreach ($projectItems as $item)
+                            <li class="splide__slide">
+                                <x-carousel.card :project="$item"/>
+                            </li>
+                            @endforeach
+                        </ul>
                     </div>
                 </div>
-            @else
-                <p>Nada a ser exibido.</p>
-            @endif
-        </div>
-    </section>
+            </div>
+        @else
+            <p>Nada a ser exibido.</p>
+        @endif
+    </div>
 
     <script>
         function carousel() {
@@ -66,5 +64,5 @@
             }
         }
     </script>
-</div>
+</section>
 
