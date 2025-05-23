@@ -3,7 +3,7 @@
         <div class="container mx-auto px-4 max-w-3xl">
             @if($post->cover_image_path)
                 <div class="aspect-[16/9] md:aspect-[2/1] rounded-lg overflow-hidden mb-8 shadow-lg">
-                    <img src="{{ asset('images/' . $post->cover_image_path) }}" alt="{{ $post->title }}"
+                    <img src="{{ asset('images/placeholder.jpg') }}" alt="{{ $post->title }}"
                          class="w-full h-full object-cover">
                 </div>
             @endif
@@ -22,7 +22,7 @@
 
             <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <a href="{{ route('blog.index') }}" class="text-[#4169E1] hover:text-white font-semibold transition-colors text-sm">
-                    &larr; {{ __('blog.back_to_blog') }}
+                    &larr; Voltar para a página inicial
                 </a>
                 <div class="flex space-x-3">
                     <span class="text-sm text-black">Compartilhar</span>

@@ -3,7 +3,7 @@
 ])
 <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden group transition-all duration-300 ease-in-out h-full flex flex-col">
     <div class="aspect-square overflow-hidden relative">
-        <img src="{{ $project->image_path ? asset('images/' . $project->image_path) : asset('images/placeholder.jpg') }}"
+        <img src="{{ $project->image_path ? asset('images/placeholder.jpg') : asset('images/placeholder.jpg') }}"
              alt="Imagem do projeto {{ $project->title }}"
              class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
 

@@ -34,22 +34,22 @@ $contactDetails = [
     ]
 ];
 @endphp
-    <section class="text-white py-18 lg:py-10">
-        <div class="container mx-auto px-4 max-w-4xl sm:px-6 lg:px-5">
+    <section class="text-white py-14 lg:py-10">
+        <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
             <div class="text-center lg:text-start">
-                <h2 class="text-3xl lg:text-4xl font-poppins font-bold mb-2 lg:mb-4">
+                <h2 class="text-3xl lg:text-4xl font-poppins font-bold text-start mb-2 lg:mb-4">
                     {{ __('pages.contact.title1') }} <span class="text-[#4169E1]">{{ __('pages.contact.title2') }}</span>
                 </h2>
-                <hr class="py-2 mb-10 lg:mb-6 border-dashed border-gray-600">
+                <hr class="py-2 mb-6 border-dashed border-gray-600">
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16 items-start">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-25 items-start">
 
-                <div class="lg:col-span-2 space-y-4" x-data="{ copiedEmailFeedback: false }">
+                <div class="lg:col-span-2 space-y-8" x-data="{ copiedEmailFeedback: false }">
                     @foreach ($contactDetails as $contact)
                         @if ($contact['type'] === 'link')
                             <a href="{{ $contact['url'] }}" target="_blank" rel="noopener noreferrer"
-                               class="flex items-center p-4 bg-gray-800 rounded-xl shadow-md hover:bg-gray-700 transition-colors group">
+                               class="flex items-center p-2 bg-gray-800 rounded-xl shadow-md hover:bg-gray-700 transition-colors group">
                                 <span class="text-[#4169E1] mr-3 group-hover:scale-110 mx-5 transition-transform">
                                     {!! $contact['icon_svg'] !!}
                                 </span>
@@ -60,7 +60,7 @@ $contactDetails = [
                             </a>
                         @elseif ($contact['type'] === 'email')
                             <div @click="navigator.clipboard.writeText('{{ $contact['copy_text'] }}'); copiedEmailFeedback = true; setTimeout(() => copiedEmailFeedback = false, 2000)"
-                                 class="flex items-center p-4 bg-gray-800 rounded-xl shadow-md hover:bg-gray-700 transition-colors group cursor-pointer relative">
+                                 class="flex items-center p-2 bg-gray-800 rounded-xl shadow-md hover:bg-gray-700 transition-colors group cursor-pointer relative">
                                 <span class="text-[#4169E1] mr-3 group-hover:scale-110 mx-5 transition-transform">
                                     {!! $contact['icon_svg'] !!}
                                 </span>
@@ -77,7 +77,7 @@ $contactDetails = [
                     @endforeach
                 </div>
 
-                <div class="lg:col-span-3 w-full bg-gray-800 p-8 sm:p-8 rounded-lg shadow-md">
+                <div class="lg:col-span-3 w-full bg-transparent rounded-lg shadow-md">
                     @livewire('contact-form')
                 </div>
             </div>

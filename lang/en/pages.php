@@ -3,7 +3,7 @@
 return [
     'home' => [
         'job_title' => 'Developer',
-        'stack_focus' => 'Full-Stack',
+        'stack_focus' => 'Web',
         'contact_button' => 'Get in Touch'
     ],
     'contact' => [

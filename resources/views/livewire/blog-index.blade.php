@@ -3,12 +3,12 @@
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl lg:max-w-5xl">
 
             <div class="mb-12 lg:mb-16 text-center lg:text-start">
-                <h1 class="text-4xl lg:text-5xl font-poppins font-extrabold text-gray-900 dark:text-white leading-tight">
-                    {{ __('blog.index_main_title1') }}
-                    <span class="text-[#4169E1] dark:text-blue-400">{{ __('blog.index_main_title2') }}</span>
+                <h1 class="text-4xl lg:text-5xl font-poppins font-extrabold text-gray-500  leading-tight">
+                    Pedro
+                    <span class="text-[#4169E1] dark:text-blue-400">Sousa</span>
                 </h1>
                 <p class="mt-3 text-lg text-gray-500 dark:text-gray-400 font-mulish">
-                    {{ __('blog.index_subtitle') }}
+                    Minha trajetória no mundo da tecnologia! Aqui você encontrará aprendizados, curiosidades e dicas de forma simples.
                 </p>
                 <hr class="mt-6 border-gray-200 dark:border-gray-700">
             </div>
@@ -22,7 +22,7 @@
                             @if($post->cover_image_path)
                                 <div class="md:w-2/5 lg:w-1/3 flex-shrink-0">
                                     <a href="{{ route('blog.show', $post->slug) }}" class="block h-56 md:h-full aspect-video md:aspect-auto">
-                                        <img src="{{ asset('images/' . $post->cover_image_path) }}" alt="{{ $post->title }}"
+                                        <img src="{{ asset('images/placeholder.jpg') }}" alt="{{ $post->title }}"
                                              class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
                                     </a>
                                 </div>

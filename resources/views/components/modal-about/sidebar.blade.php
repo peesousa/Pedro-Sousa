@@ -22,8 +22,6 @@ $whatsappMessageEN = 'https://wa.me/' . $userPhoneLink . '?text=' . urlencode('H
         <img src="{{ asset('images/eu.jpeg') }}" alt="Pedro Sousa" class="w-24 h-24 rounded-full shadow-md mb-4">
     </div>
 
-        <h2 id="modal-title-{{ uniqid() }}" class="text-xl md:text-2xl font-poppins font-bold text-white pr-10">            Pedro <span class="text-[#4169E1]">Sousa</span>
-        </h2>
 
     @foreach ($contactInfos as $info)
     <div>
@@ -44,7 +42,7 @@ $whatsappMessageEN = 'https://wa.me/' . $userPhoneLink . '?text=' . urlencode('H
                 <span class="text-gray-300">{{ $info['name'] }}</span>
             @endif
         </p>
-        <hr class="border-gray-600">
+        <hr class="border-dashed mt-2 border-gray-600">
     </div>
     @endforeach
 
@@ -56,7 +54,7 @@ $whatsappMessageEN = 'https://wa.me/' . $userPhoneLink . '?text=' . urlencode('H
             </span>
             {{ App::getLocale() === 'pt_BR' ? '(61) 99969-9784' : '+55 61 99969-9784' }}
         </a>
-        <hr class="border-gray-600">
+        <hr class="border-dashed mt-2 border-gray-600">
     </div>
 
     <div x-data="{ copied: false }" class="relative">
@@ -68,7 +66,7 @@ $whatsappMessageEN = 'https://wa.me/' . $userPhoneLink . '?text=' . urlencode('H
             {{ __('modal_about.button_copy_email') }}
         </p>
         <span x-show="copied" x-transition class="absolute -top-7 left-1/2 -translate-x-1/2 text-xs bg-green-500 text-white px-2 py-1 rounded shadow-lg">{{ __('modal_about.copied_message') }}</span>
-        <hr class="border-gray-600">
+        <hr class="border-dashed mt-2 border-gray-600">
     </div>
 
     <div class="mt-6 w-full" x-data="{ isOpen: false }">
@@ -99,7 +97,7 @@ $whatsappMessageEN = 'https://wa.me/' . $userPhoneLink . '?text=' . urlencode('H
                 x-transition:leave="transition ease-in duration-75"
                 x-transition:leave-start="transform opacity-100 scale-100"
                 x-transition:leave-end="transform opacity-0 scale-95"
-                class="absolute top-0 left-full ml-2 z-20 mt-0 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute top-0 left-full ml-2 z-40 mt-0 w-56 origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="cv-menu-button"
@@ -127,5 +125,4 @@ $whatsappMessageEN = 'https://wa.me/' . $userPhoneLink . '?text=' . urlencode('H
             </div>
         </div>
     </div>
-
 </div>

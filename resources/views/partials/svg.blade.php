@@ -19,7 +19,7 @@
      x-init="initSvgPaths()"
      class="w-full h-full flex justify-center items-center"
 >
-    <svg id="retratoSVG" version="1.0" xmlns="http://www.w3.org/2000/svg"
+    <svg id="retratoSVG" version="1.0"
          class="block max-w-full w-auto h-auto max-h-[80vh] sm:max-w-[500pt] my-[20px]"
          viewBox="0 0 1024 1024" preserveAspectRatio="xMidYMid meet">
         <g transform="translate(0.000000,1024.000000) scale(0.100000,-0.100000)">

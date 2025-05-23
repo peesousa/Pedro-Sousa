@@ -14,6 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 
     <style>
+        [x-cloak] { display: none !important; }
+
         #vanta-background {
             position: fixed;
             top: 0;
@@ -23,18 +25,14 @@
             z-index: 0;
         }
 
-        header {
-            position: relative;
-            z-index: 2;
-        }
         main {
             position: relative;
-            z-index: 1;
+            z-index: 55;
         }
     </style>
 </head>
 <body class=""> <div id="vanta-background"></div>
-
+        <x-intro/>
     @php
         $navLinks = [
             ['route_name' => 'home', 'label_key' => 'nav.home', 'default_label' => 'Início'],
@@ -145,7 +143,7 @@
             });
         "
         x-show="showPageContent"
-         x-transition:enter="transition ease-out duration-1500"
+         x-transition:enter="transition ease-in-out duration-1000"
          x-transition:enter-start="opacity-0 transform translate-y-4"
          x-transition:enter-end="opacity-100 transform translate-y-0"
          x-cloak

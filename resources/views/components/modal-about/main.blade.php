@@ -19,7 +19,7 @@
      x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
      x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
      @click.outside="showModal = false"
-     class="relative bg-gray-800/95 text-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col backdrop-blur-md">
+     class="relative bg-gray-800/95 text-white rounded-xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col backdrop-blur-md">
 
     <button @click="showModal = false; $dispatch('close-modal')"
             type="button"
@@ -28,19 +28,27 @@
         <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
     </button>
 
-    <div class="px-6 pt-5 pb-3 flex-shrink-0">
+    <div class="px-6 pt-5 pb-3 flex-shrink-0 border-b-1 mb-5 border-gray-900">
+        <h2 id="modal-title-{{ uniqid() }}" class="text-xl md:text-2xl font-poppins font-bold text-white pr-10">            Pedro <span class="text-[#4169E1]">Sousa</span>
+        </h2>
     </div>
 
-    <div class="flex-grow overflow-y-auto px-8 pb-6">
-        <div class="flex flex-col lg:flex-row gap-x-8 lg:gap-x-10">
-            <div class="w-full lg:w-1/3 lg:sticky lg:top-0 self-start pt-1">
-                @include('components.modal-about.sidebar')
-            </div>
-            <div class="w-full lg:w-2/3 mt-6 lg:mt-0">
-                @include('components.modal-about.content')
+ <div class="flex-grow overflow-y-auto px-8 pb-6">
+            <div class="flex flex-col lg:flex-row lg:items-stretch">
+
+                <div class="w-full lg:w-1/3 lg:sticky lg:top-0 self-start pt-1 z-20">
+                    @include('components.modal-about.sidebar')
+                </div>
+
+                <div class="hidden lg:flex items-center justify-center px-4">
+                    <div class="w-px h-full border-l-1 border-dashed border-gray-600"></div>
+                </div>
+
+                <div class="w-full lg:w-2/3 mt-6 lg:mt-0 z-10">
+                    @include('components.modal-about.content')
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 

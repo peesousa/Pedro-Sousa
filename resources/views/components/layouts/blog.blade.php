@@ -30,20 +30,7 @@
 <body class="bg-gray-100 text-gray-800 font-sans antialiased">
 
     <header class="bg-white shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div>
-                    <a href="{{ route('blog.index') }}" class="text-xl font-bold font-poppins text-[#4169E1]">
-                        {{ __('blog.title') }}
-                    </a>
-                </div>
-                <div class="space-x-4 text-sm">
-                    <a href="{{ route('home') }}" class="text-gray-600 hover:text-[#4169E1] font-medium">
-                        &larr; {{ __('nav.back_to_portfolio') }}
-                    </a>
-                </div>
-            </div>
-        </nav>
+            <x-layouts.blog.header/>
     </header>
 
     <main class="min-h-screen">
@@ -51,16 +38,7 @@
     </main>
 
     <footer class="bg-gray-50 border-t border-gray-200">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
-            <p class="text-sm text-gray-500">
-                &copy; {{ date('Y') }} Pedro Sousa. {{ __('blog.footer_rights') }}
-            </p>
-            <p class="mt-1">
-                <a href="{{ route('home') }}" class="text-xs text-[#4169E1] hover:underline">
-                    {{ __('nav.back_to_portfolio') }}
-                </a>
-            </p>
-        </div>
+            <x-layouts.blog.footer/>
     </footer>
 
     @livewireScripts

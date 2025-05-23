@@ -32,7 +32,7 @@ class BlogIndex extends Component
                        ->whereNotNull('published_at')
                        ->where('published_at', '<=', now())
                        ->orderBy('published_at', 'desc')
-                       ->paginate(10);
+                       ->paginate(5);
 
         return view('livewire.blog-index', [
             'posts' => $posts,

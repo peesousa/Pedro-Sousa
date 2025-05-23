@@ -17,7 +17,7 @@ $skills = [
         <h3 class="text-xl lg:text-2xl uppercase font-poppins !text-white !mb-3">
             {{ __('modal_about.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.title2') }}</span>
         </h3>
-        <hr class="border-gray-700 !mt-0 !mb-4">
+        <hr class="border-dashed border-gray-600 !mt-0 !mb-4">
         <p>{{ __('modal_about.content') }}</p>
     </div>
 
@@ -25,7 +25,7 @@ $skills = [
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             {{ __('modal_about.quality_services.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.quality_services.title2') }}</span>
         </h3>
-        <hr class="border-gray-700 mb-6">
+        <hr class="border-dashed border-gray-600 mb-6">
         <div class="grid grid-cols-1 gap-6">
             @foreach (__('modal_about.quality_services.items') as $item)
             <div class="bg-gray-700 rounded-lg shadow-md overflow-hidden flex flex-col">
@@ -45,7 +45,7 @@ $skills = [
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             {{ __('modal_about.skills.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.skills.title2') }}</span>
         </h3>
-        <hr class="border-gray-700 mb-6">
+        <hr class="border-dashed border-gray-600 mb-6">
         <div class="space-y-4">
             @foreach ($skills as $skill)
             <div>
@@ -65,7 +65,7 @@ $skills = [
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             {{ __('modal_about.education_timeline.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.education_timeline.title2') }}</span>
         </h3>
-        <hr class="border-gray-700 mb-6">
+        <hr class="border-dashed border-gray-600 mb-6">
         <div class="space-y-6 relative border-l-2 border-gray-600 ml-3 pl-6">
         @foreach (Lang::get('modal_about.education_timeline.content') as $item)
             <div class="relative">
@@ -82,7 +82,7 @@ $skills = [
         <h3 class="text-xl lg:text-2xl uppercase font-poppins text-white mb-3">
             {{ __('modal_about.working_timeline.title1') }} <span class="text-[#4169E1]">{{ __('modal_about.working_timeline.title2') }}</span>
         </h3>
-        <hr class="border-gray-700 mb-6">
+        <hr class="border-dashed border-gray-600 mb-6">
         <div class="space-y-6 relative border-l-2 border-gray-600 ml-3 pl-6">
              @foreach (Lang::get('modal_about.working_timeline.content') as $item)
             <div class="relative">
