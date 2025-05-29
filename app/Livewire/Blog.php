@@ -16,7 +16,7 @@ class Blog extends Component
 
     public function loadPosts(){
         $this->blogPosts = ModelsBlog::where('status', BlogStatus::Published)
-            ->orderBy('published_at', 'asc')
+            ->orderBy('published_at', 'desc')
             ->get();
     }
 
