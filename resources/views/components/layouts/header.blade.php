@@ -31,7 +31,7 @@
         }
     </style>
 </head>
-<body class=""> <div id="vanta-background"></div>
+<body class="bg-black"> <div id="vanta-background"></div>
         <x-intro/>
     @php
         $navLinks = [
