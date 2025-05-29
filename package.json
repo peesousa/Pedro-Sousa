@@ -1,0 +1,22 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.1.7",
+        "axios": "^1.8.2",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.2.0",
+        "tailwindcss": "^4.1.7",
+        "vite": "^6.2.4"
+    },
+    "dependencies": {
+        "@splidejs/splide": "^4.1.4",
+        "@tsparticles/engine": "^3.8.1",
+        "alpinejs": "^3.14.9",
+        "tsparticles": "^3.8.1"
+    }
+}
