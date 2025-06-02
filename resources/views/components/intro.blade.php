@@ -66,7 +66,7 @@
      x-init="initializeIntro()"
      x-cloak
      class="fixed inset-0"
-     :class="introIsActive ? 'z-[60]' : 'z-[-1] pointer-events-none'"
+     :class="introIsActive ? 'z-[90]' : 'z-[-1] pointer-events-none'"
 >
     <div
         x-show="introContentVisible"

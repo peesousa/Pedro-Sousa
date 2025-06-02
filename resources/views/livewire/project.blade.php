@@ -1,5 +1,6 @@
-<section class="text-white py-14 lg:py-10">
-    <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
+<section class="text-white">
+
+    <div class="mx-auto max-w-4xl px-10 lg:px-0">
         <h2 class="text-3xl lg:text-4xl font-poppins font-bold text-start mb-2 lg:mb-4">
             Meus <span class="text-[#4169E1]">Projetos</span>
         </h2>

@@ -44,7 +44,7 @@
     @endphp
 
     <header>
-        <nav x-data="{ openMobileMenu: false }" class="text-white fixed top-0 left-0 right-0 z-50 shadow-md">
+        <nav x-data="{ openMobileMenu: false }" class="text-white sticky top-0 left-0 right-0 z-[80] shadow-md">
             <div class="container mx-auto mt-5 px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-around h-16">
                     <div class="flex-shrink-0">
@@ -132,7 +132,7 @@
             </div>
         </nav>
 
-        <div class="pt-16"></div>
+        <div class="pt-5"></div>
     </header>
 
     <div x-data="{showPageContent: false}"

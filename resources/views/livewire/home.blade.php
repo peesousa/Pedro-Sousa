@@ -1,7 +1,6 @@
 <div>
-    <div class="flex flex-col mt-40 items-center justify-center">
-
-            <h1 class="text-white text-6xl font-extrabold uppercase">Pedro <span class="text-[#4169e1]">Sousa</span></h1>
+    <div class="flex flex-col py-30 items-center justify-center">
+            <h1 class="text-white text-center text-6xl font-extrabold uppercase">Pedro <span class="text-[#4169e1]">Sousa</span></h1>
             <h2 class="text-gray-400 text-2xl font-bold uppercase mt-3">
                 @if(App::getLocale() === 'pt_BR')
                     {{ __('pages.home.job_title') }}

@@ -34,8 +34,8 @@ $contactDetails = [
     ]
 ];
 @endphp
-    <section class="text-white py-14 lg:py-10">
-        <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
+    <section class="text-white">
+        <div class="mx-auto max-w-4xl px-10 lg:px-0">
             <div class="text-center lg:text-start">
                 <h2 class="text-3xl lg:text-4xl font-poppins font-bold text-start mb-2 lg:mb-4">
                     {{ __('pages.contact.title1') }} <span class="text-[#4169E1]">{{ __('pages.contact.title2') }}</span>
@@ -45,7 +45,7 @@ $contactDetails = [
 
             <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-25 items-start">
 
-                <div class="lg:col-span-2 space-y-8" x-data="{ copiedEmailFeedback: false }">
+                <div class="lg:col-span-2 lg:space-y-8 space-y-4" x-data="{ copiedEmailFeedback: false }">
                     @foreach ($contactDetails as $contact)
                         @if ($contact['type'] === 'link')
                             <a href="{{ $contact['url'] }}" target="_blank" rel="noopener noreferrer"
@@ -76,6 +76,8 @@ $contactDetails = [
                         @endif
                     @endforeach
                 </div>
+
+                <hr class="lg:hidden   border-dashed border-gray-600">
 
                 <div class="lg:col-span-3 w-full bg-transparent rounded-lg shadow-md">
                     @livewire('contact-form')
