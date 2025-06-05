@@ -16,8 +16,8 @@
                 publicado em {{ $post->published_at ? $post->published_at->isoFormat('LLLL') : 'N/A' }}
             </p>
 
-            <div class="prose prose-lg lg:prose-xl prose-invert max-w-none text-black font-mulish leading-relaxed">
-                {!! Str::markdown($post->content) !!}
+            <div class="prose prose-lg lg:prose-xl max-w-none font-mulish leading-relaxed">
+                    {!! Str::markdown($post->content) !!}
             </div>
 
             <div class="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center gap-4">
