@@ -19,14 +19,12 @@
                         <article wire:key="post-preview-{{ $post->id }}"
                                  class="bg-white dark:bg-gray-800 rounded-xl shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out overflow-hidden flex flex-col md:flex-row group">
 
-                            @if($post->cover_image_path)
                                 <div class="md:w-2/5 lg:w-1/3 flex-shrink-0">
                                     <a href="{{ route('blog.show', $post->slug) }}" class="block h-56 md:h-full aspect-video md:aspect-auto">
-                                        <img src="{{ asset('images/placeholder.jpg') }}" alt="{{ $post->title }}"
+                                        <img src="{{ $post->cover_image_path ? asset('storage/' . $post->cover_image_path) : asset('images/placeholder.jpg') }}" alt="{{ $post->title }}"
                                              class="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105">
                                     </a>
                                 </div>
-                            @endif
 
                             <div class="p-6 md:p-8 flex flex-col justify-between flex-grow {{ $post->cover_image_path ? 'md:w-3/5 lg:w-2/3' : 'w-full' }}">
                                 <div>

@@ -3,7 +3,7 @@
 ])
 <div class="bg-gray-800 rounded-xl shadow-lg overflow-hidden group transition-all duration-300 ease-in-out h-full flex flex-col">
     <div class="aspect-square overflow-hidden relative">
-        <img src="{{ $post->image_path ? asset('images/' . $post->image_path) : asset('images/placeholder.jpg') }}"
+        <img src="{{ $post->cover_image_path ? asset('storage/' . $post->cover_image_path) : asset('images/placeholder.jpg') }}"
              alt="Imagem do post{{ $post->title }}"
              class="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-105">
 

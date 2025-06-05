@@ -1,16 +1,17 @@
 <div>
     <article class="py-16 lg:py-24">
         <div class="container mx-auto px-4 max-w-3xl">
+            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-poppins font-bold text-black mb-8 leading-tight">
+                {{ $post->title }}
+            </h1>
+
             @if($post->cover_image_path)
-                <div class="aspect-[16/9] md:aspect-[2/1] rounded-lg overflow-hidden mb-8 shadow-lg">
-                    <img src="{{ asset('images/placeholder.jpg') }}" alt="{{ $post->title }}"
+                <div class="aspect-[16/9] md:aspect-[2/1] rounded-lg overflow-hidden mb-4 shadow-lg">
+                    <img src="{{$post->cover_image_path ? asset('storage/' . $post->cover_image_path) : asset('images/placeholder.jpg') }}" alt="{{ $post->title }}"
                          class="w-full h-full object-cover">
                 </div>
             @endif
 
-            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-poppins font-bold text-black mb-4 leading-tight">
-                {{ $post->title }}
-            </h1>
 
             <p class="text-sm text-black font-mulish mb-8">
                 publicado em {{ $post->published_at ? $post->published_at->isoFormat('LLLL') : 'N/A' }}
