@@ -1,61 +1,110 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Portfólio Pessoal - Pedro Sousa
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este é o repositório do meu site de portfólio pessoal, desenvolvido para mostrar meus projetos, compartilhar artigos no blog e facilitar o contato. A aplicação foi construída utilizando o ecossistema TALL (Tailwind CSS, Alpine.js, Laravel, e Livewire) e inclui um painel administrativo completo feito com Filament.
 
-## About Laravel
+## ✨ Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+  * **Projetos:** Uma seção para exibir os projetos em que trabalhei, com descrições, tecnologias e links.
+  * **Blog:** Um blog integrado para publicar aprendizados, curiosidades e conhecimentos gerais.
+  * **Formulário de Contato:** Um formulário funcional para que visitantes possam enviar mensagens diretamente para mim.
+  * **Design Responsivo:** Interface adaptável para uma ótima experiência em desktops, tablets e celulares.
+  * **Suporte Multilíngue:** Conteúdo disponível em Português (pt-BR) e Inglês (en). (em desenvolvimento)
+  * **Painel Administrativo:** Uma área de gerenciamento robusta construída com [Filament](https://filamentphp.com/) para gerenciar projetos, posts do blog e usuários.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Tecnologias Utilizadas
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+A aplicação foi construída com as seguintes tecnologias:
 
-## Learning Laravel
+  * **Backend:**
+      * [PHP 8.3](https://www.php.net/)
+      * [Laravel 12](https://laravel.com/)
+  * **Frontend:**
+      * [Livewire 3](https://livewire.laravel.com/)
+      * [Alpine.js](https://alpinejs.dev/)
+      * [Tailwind CSS](https://tailwindcss.com/)
+      * [Vite](https://vitejs.dev/)
+  * **Painel Administrativo:**
+      * [Filament 3](https://filamentphp.com/)
+  * **Banco de Dados:**
+      * Compatível com MySQL / PostgreSQL
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Instalação e Configuração Local
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Siga os passos abaixo para executar o projeto em seu ambiente local.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+**Pré-requisitos:**
 
-## Laravel Sponsors
+  * PHP 8.3+
+  * Composer
+  * Node.js & NPM
+  * Um banco de dados (ex: MySQL, PostgreSQL)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+**Passos:**
 
-### Premium Partners
+1.  **Clone o repositório:**
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+    ```bash
+    git clone https://github.com/peesousa/pedro-sousa.git
+    cd pedro-sousa
+    ```
 
-## Contributing
+2.  **Instale as dependências do PHP:**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    ```bash
+    composer install
+    ```
 
-## Code of Conduct
+3.  **Instale as dependências do Node.js:**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ```bash
+    npm install
+    ```
 
-## Security Vulnerabilities
+4.  **Configure o ambiente:**
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+      * Copie o arquivo de exemplo `.env.example` para um novo arquivo chamado `.env`.
+        ```bash
+        cp .env.example .env
+        ```
+      * Gere a chave da aplicação:
+        ```bash
+        php artisan key:generate
+        ```
+      * Configure as variáveis de ambiente no arquivo `.env`, principalmente as de conexão com o banco de dados (`DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USERNAME`, `DB_PASSWORD`).
 
-## License
+5.  **Execute as migrações e os seeders:**
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+      * As migrações criarão as tabelas no banco de dados. Os seeders preencherão o banco com dados de exemplo.
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+6.  **Compile os assets do frontend:**
+
+    ```bash
+    npm run dev
+    ```
+
+7.  **Inicie o servidor de desenvolvimento:**
+
+    ```bash
+    php artisan serve
+    ```
+
+    A aplicação estará disponível em `http://127.0.0.1:8000`.
+
+## 🔐 Painel Administrativo
+
+O painel administrativo, construído com Filament, permite gerenciar o conteúdo do site.
+
+  * **Acesso:** Navegue para `/admin` na URL da sua aplicação (ex: `http://127.0.0.1:8000/admin`).
+
+  * **Criar um usuário administrador:**
+    Para acessar o painel, você precisa de um usuário. Execute o comando interativo do Filament para criar um:
+
+    ```bash
+    php artisan make:filament-user
+    ```
+
+    Siga as instruções para definir o nome, email e senha do administrador. Após a criação, você poderá usar essas credenciais para fazer login.
